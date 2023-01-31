@@ -1,0 +1,136 @@
+<!-- IN PROGRESS -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reese's Diner
+      <!-- a mobile ordering app for a casual & cozy restaurant that offers enjoyable yet reasonably-priced meals  -->
+    </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+		<!-- CSS -->
+		<link rel="stylesheet" href="index.css">
+		<!-- Font Awesome CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="flex-container vertical">
+      <h1 class="title">Reese's Diner</h1>
+      <h2 class="subtitle">The best burgers and pizzas in town.</h2>
+    </header>
+    <main class="flex-container vertical">
+      <h3 id="discount-message"><span class="discount-level">50% off</span> your meal when you pair your burger or pizza with a beer!</h3>
+      <div class="flex-container vertical" id="menu-section">
+        <!-- menu items here -->
+      </div>
+      <div class="flex-container vertical" id="checkout-section">
+         <!-- checkout section here -->
+      </div>
+    </main>
+
+    <!-- Payment Modal -->
+    <div class="payment-modal" id="payment-modal">
+      <h2 class="modal-title">Enter card details</h2>
+      <form class="flex-container vertical payment-form" id="payment-form">
+        <input 
+          id="modal-name"
+          class="modal-name"
+          name="modal-name"
+          placeholder="Enter your name"
+          required
+          type="text"
+          step="1"
+        />
+        <input 
+          id="modal-card"
+          class="modal-card"
+          name="modal-card"
+          placeholder="Enter card number"
+          required
+          type="text"
+        />
+        <input 
+          id="modal-cvv"
+          class="modal-cvv"
+          name="modal-cvv"
+          placeholder="Enter CVV"
+          required
+          type="text"
+        />
+        <button
+          id="pay-btn" class="pay-btn" type="submit">Pay</button>
+      </form>
+    </div>
+    <!-- Customer feedback modal -->
+    <div class="rating-modal" id="rating-modal">
+      <div class="rating-modal-close-btn-container">
+        <button class="rating-modal-close-btn">
+          <i class="fa-solid fa-xmark fa-2x" id="rating-modal-close-btn"></i>
+        </button>
+      </div><!-- class="rating-modal-close-btn-container" -->
+      <div class="rating-modal-inner" id="rating-modal-inner">
+        <form id="rating-form">
+          <fieldset class="flex-container vertical rating-fieldset">
+            <legend>So how would you rate our app today?</legend>
+            <div class="flex-container radio-group">
+              <div class="radioOption">
+                <input type="radio" name="rating" id="rating-1" value="1" />
+                <label for="rating-1">Poor</label>
+              </div>
+              <div class="radioOption">
+                <input type="radio" name="rating" id="rating-2" value="2" />
+                <label for="rating-2"></label>
+              </div>
+              <div class="radioOption">
+                <input type="radio" name="rating" id="rating-3" value="3" />
+                <label for="rating-3"></label>
+              </div>
+              <div class="radioOption">
+                <input type="radio" name="rating" id="rating-4" value="4" />
+                <label for="rating-4"></label>
+              </div>
+              <div class="radioOption">
+                <input type="radio" name="rating" id="rating-5" value="5" />
+                <label for="rating-5">Excellent</label>
+              </div>
+            </div><!-- class="flex-container radio-group" -->
+            <textarea
+              form="rating-form"
+              placeholder="We are always looking for ways to improve at Reese's Diner so kindly leave us your comments or suggestions."
+              name="rating-textarea"
+              id="rating-textarea"
+              cols="30"
+              rows="8"></textarea>
+            <button 
+              class="radio-rating-btn" 
+              id="radio-rating-btn" 
+              type="submit">SUBMIT</button>
+          </fieldset><!-- class="flex-container vertical rating-fieldset" -->
+        </form><!-- id="rating-form" -->
+      </div><!-- class="rating-modal-inner" id="rating-modal-inner" -->
+    </div><!-- class="rating-modal" id="rating-modal" -->
+    <div class="flex-container vertical thank-you" id="thank-you">
+      <!-- THANK YOU MESSAGE & RATING SCORE -->
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
+
+
+ <!-- 
+    *** FIGMA file ***
+    https://www.figma.com/file/Hdgwo69Dym9vVsxbuPbl0h/Mobile-Restaurant-Menu?t=6IDlm3R5ebPKgdhR-0
+  -->
+
+  
+    <!-- https://cdnjs.com/libraries/font-awesome  == copy link tag-->
+    <!-- https://fontawesome.com/ -->
+

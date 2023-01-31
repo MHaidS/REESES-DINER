@@ -1,0 +1,187 @@
+/* IN PROGRESS */
+
+/* 
+
+--- 01 TYPOGRAPHY SYSTEM
+- FONT SIZE SYSTEM (px)
+    10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- FONT WEIGHTS
+  Default: 400-
+  Bold => 700-
+
+- LINE HEIGHTS(px)
+  Default: (14)13.8-
+  Small => (17)16.8-
+  Medium => 24-
+  Large => 31.12-
+  emoji => 98.4-
+
+- LETTER SPACING
+  -.02em
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#F5F5F5
+(black) #000000
+#FFFFFF
+#8b8b8b
+#DEDEDE
+#BBBBBB
+#393333
+        #0E0E0E
+#757575
+#065f46
+#393333 #D2D2D2
+red     #f43f5e
+====================
+green
+
+#16DB99
+#73E9C1
+transparent
+#ECFDF5
+
+  --- 02 COLORS
+  - PRIMARY:  
+  - TINTS: 
+  #fdf2e9
+  #fae5d3
+
+  - SHADES: 
+  #cf711f
+  #45260a
+  - ACCENTS: 
+  - GRAYS: 
+
+  #888
+  
+  --- 03 SHADOWS
+
+  --- 04 BORDER-RADIUS
+      Default:  9px
+      Medium: 11px
+
+  --- 05 WHITESPACE
+  
+  - SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+html,
+body {
+  font-family: "Smythe", cursive;
+  /* font-style: normal; */
+  font-style: regular;
+  font-weight: 400;
+  margin: 0;
+  color: #000000;
+  background: #f5f5f5;
+}
+/* ************************** */
+/* ******* TYPOGRAPHY ******* */
+/* ************************** */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  margin: 0;
+}
+
+h1 {
+  font-size: 39px;
+  line-height: 24px;
+}
+
+h2 {
+  font-size: 22.42px;
+  line-height: 13.8px;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 17px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h6 {
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-style: regular;
+  /* font-size: 12px; */
+  font-size: 28px;
+  /* line-height: 24px; */
+  line-height: 16.8px;
+}
+
+p {
+  margin: 0;
+}
+/* ************************** */
+/* ********* LAYOUT ********* */
+/* ************************** */
+.flex-container {
+  display: flex;
+}
+
+.vertical {
+  flex-direction: column;
+}
+
+header,
+main,
+#menu-section {
+  margin: 0 auto;
+}
+
+header {
+  background-image: url("./images/bg-img.png");
+  width: 600px;
+  height: 167px;
+  color: #ffffff;
+  gap: 19px;
+  margin-bottom: 30px;
+}
+
+main,
+#menu-section {
+  width: 508px;
+  gap: 45px;
+}
+
+.title {
+  margin: 46px 0 0 46.07px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  -webkit-text-stroke: 1px black;
+}
+
+.subtitle {
+  margin: 0 0 0 46.07px;
+}
+
+#discount-message {
+  font-size: 24px;
+  text-align: center;
+}
+
+.discount-level {
+  /* color: red; */
+  color: #f43f5e;
+}
+
+/* ************************** */
+/* ********* ITEMS ********* */
+/* ************************** */
+.item {
+}
