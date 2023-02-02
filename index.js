@@ -30,9 +30,50 @@ let orderItems = [];
 document.addEventListener("click", function (e) {
   if (e.target.dataset.menuIncrement) {
     handleIncrementClick(Number(e.target.dataset.menuIncrement));
+  } else if (e.target.dataset.checkoutIncrement) {
+    handleIncrementClick(Number(e.target.dataset.checkoutIncrement));
+  } else if (e.target.dataset.checkoutDecrement) {
+    handleDecrementClick(Number(e.target.dataset.checkoutDecrement));
+  } else if (e.target.id === "complete-order-btn") {
+    handleCompleteOrderBtnClick(e);
+  } else {
+    returnToCheckoutSection(e);
   }
 });
-// PAYMENT FORM PROCESS
+// PAYMENT FORM PROCESS ----
+
+// Handle submit button on rating form ----
+
+// LETS THE USER CLICK ON THE OUTSIDE THE PAYMENT MODAL & BE REDIRECTED TO THE CHECKOUT SECTION
+function returnToCheckoutSection(e) {
+  const clickedOnModal = e.target.closest(".payment-modal");
+
+  if (!clickedOnModal) {
+    hideModal(paymentModal);
+  }
+}
+
+//Hides modal that is passed to it as argument
+
+// SHOWS THE PAYMENT MODAL
+function handleCompleteOrderBtnClick(e) {
+  e.stopPropagation();
+  paymentModal.style.display = "flex";
+}
+
+// ENABLES USERS TO DECREASE THE AMOUNT OF THE DESIRED ITEM
+function handleDecrementClick(itemId) {
+  // locates item in orderItems[] array when decrement btn is clicked
+  const orderItem = retreiveOrderItemsArrayItem(itemId);
+  // amount of item is either decreased or removed when decrement btn is clicked
+  if (orderItem.orders > 1) {
+    orderItem.orders--;
+  } else if (orderItem.orders === 1) {
+    orderItems = orderItems.filter((item) => item.id != itemId);
+  }
+  console.log(orderItems);
+  renderCheckoutSection();
+}
 
 // ENABLES USERS TO INCREASE THE AMOUNT OF THE DESIRED ITEM
 function handleIncrementClick(itemId) {
@@ -59,7 +100,7 @@ function renderCheckoutSection() {
   let totalPrice = 0;
   if (orderItems.length) {
     orderItems.forEach(function (item) {
-      // ITERATE THROUGH orderItems[] ARRAY THEN RENDER ITEM/s ON CHECKOUT SECTION
+      // ITERATE THROUGH orderItems[] ARRAY THEN RENDER ITEM ON CHECKOUT SECTION
       orderItemsHtml += `
         <div class="flex-container order-item">
           <h3 class="item-name">${item.itemName}</h3>
